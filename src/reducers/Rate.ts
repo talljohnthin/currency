@@ -1,7 +1,12 @@
 import { Rate } from "./../types/Rate";
-import { GET_RATES, GET_RATE, RateActionTypes } from "../types/Actions";
+import {
+  GET_RATES,
+  GET_RATE,
+  RateActionTypes,
+  FETCH_RATES,
+} from "../types/Actions";
 
-interface RateState {
+export interface RateState {
   list: Array<string | number>;
 }
 
@@ -15,6 +20,11 @@ const rateReducer = (
 ) => {
   switch (action.type) {
     case GET_RATES:
+      return {
+        ...state,
+        list: action.rates,
+      };
+    case FETCH_RATES:
       return {
         ...state,
         list: action.rates,

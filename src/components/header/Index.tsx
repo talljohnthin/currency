@@ -16,6 +16,8 @@ export default Index;
 const Header = styled.section`
   padding: 26px 30px;
   background: white;
+  display: flex;
+  justify-content: center;
 `;
 
 const Logo = styled.section`

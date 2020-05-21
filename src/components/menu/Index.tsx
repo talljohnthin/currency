@@ -1,15 +1,29 @@
 import React, { FC } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import {
+  startfetchRates,
+  startGetRate,
+  startGetRates,
+} from "./../../actions/Rate";
 
 const Index = () => {
+  const dispatch = useDispatch();
   return (
     <>
       <Wrapper>
         <InnerWrapper>
-          <Item>Global</Item>
-          <Item>Poland</Item>
+          <Link to="/" onClick={() => dispatch(startGetRates())}>
+            <Item>Global</Item>
+          </Link>
+          <Link to="/poland" onClick={() => dispatch(startGetRate("PLN"))}>
+            <Item>Poland</Item>
+          </Link>
         </InnerWrapper>
-        <Item>Refresh Rates</Item>
+        <Link to="/" onClick={() => dispatch(startfetchRates())}>
+          <Item>Refresh Rates</Item>
+        </Link>
       </Wrapper>
     </>
   );
@@ -23,6 +37,7 @@ const Wrapper = styled.section`
   justify-content: space-between;
   border: 1px solid #f1f1f1;
   border-radius: 6px;
+  margin-bottom: 15px;
 `;
 
 const Item = styled.section`
@@ -42,4 +57,5 @@ const InnerWrapper = styled.section`
   display: flex;
   font-weight: 900;
   font-size: 26px;
+  outine: 0;
 `;

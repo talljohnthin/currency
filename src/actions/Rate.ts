@@ -1,7 +1,6 @@
 import { Rate } from "./../types/Rate";
 import { GET_RATES, GET_RATE, FETCH_RATES, AppActions } from "../types/Actions";
 import { Dispatch } from "redux";
-import { AppState } from "../store/configureStore";
 
 export const fetchRates = (rates: Rate[]): AppActions => ({
   type: FETCH_RATES,

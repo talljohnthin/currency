@@ -1,55 +1,35 @@
-import React, { Fragment, useState, useEffect } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import styled from "styled-components";
-import {
-  fetchRates,
-  getRatesGlobal,
-  getRatesPoland,
-} from "./redux/actions/rates/ratesActions";
+import React, { useEffect, FC } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { startfetchRates } from "./actions/Rate";
+import styled from "styled-components";
 import Header from "./components/header/Index";
 import Menu from "./components/menu/Index";
+import { Global, Single } from "./components/rates/Index";
 
-const App = () => {
+interface Props {}
+
+const App: FC<Props> = (Props: Props) => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchRates());
-  });
-
-  const handleGetGlobalRates = () => {
-    dispatch(getRatesGlobal());
-  };
-
-  const handleGetPolandRates = () => {
-    dispatch(getRatesPoland());
-  };
-
+    dispatch(startfetchRates());
+  }, []);
   return (
-    <Fragment>
-      <Header />
+    <>
+      <Header></Header>
       <Wrapper>
-        <Menu />
+        <Router>
+          <Menu />
+          <Switch>
+            <Route exact path="/" component={Global} />
+            <Route exact path="/poland" component={Single} />
+          </Switch>
+        </Router>
       </Wrapper>
-
-      <button onClick={handleGetGlobalRates}>click poland</button>
-      <button onClick={handleGetPolandRates}>click global</button>
-      {/* <Router>
-        <Route path="/" exact component={Flow} />
-        <Route path="/powerbill" exact component={PowerBill} />
-        <Route path="/address" exact component={Address} />
-        <Route path="/address/change" exact component={Change} />
-        <Route path="/address/search" exact component={Search} />
-        <Route path="/homeowner" exact component={HomeOwner} />
-        <Route path="/provider" exact component={Provider} />
-        <Route path="/roofshade" exact component={ProofShade} />
-        <Route path="/name" exact component={Personal} />
-        <Route path="/email" exact component={Email} />
-        <Route path="/tel" exact component={Phone} />
-        <Route path="/results" exact component={Results} />
-      </Router> */}
-    </Fragment>
+    </>
   );
 };
+
 export default App;
 
 const Wrapper = styled.section`
