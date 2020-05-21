@@ -1,4 +1,3 @@
-import { Rate } from "./../types/Rate";
 import {
   GET_RATES,
   GET_RATE,

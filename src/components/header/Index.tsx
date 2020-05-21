@@ -1,7 +1,9 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 
-const Index = () => {
+interface Props {}
+
+const Index: FC<Props> = (props: Props) => {
   return (
     <>
       <Header>

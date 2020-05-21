@@ -13,7 +13,7 @@ const App: FC<Props> = (Props: Props) => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(startfetchRates());
-  }, []);
+  }, [dispatch]);
   return (
     <>
       <Header></Header>

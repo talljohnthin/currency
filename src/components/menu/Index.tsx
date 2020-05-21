@@ -8,7 +8,9 @@ import {
   startGetRates,
 } from "./../../actions/Rate";
 
-const Index = () => {
+interface Props {}
+
+const Index: FC<Props> = (props: Props) => {
   const dispatch = useDispatch();
   return (
     <>
@@ -41,7 +43,7 @@ const Wrapper = styled.section`
 `;
 
 const Item = styled.section`
-  color: #c8c9cd;
+  color: #393939;
   font-weight: 500;
   font-size: 14px;
   cursor: pointer;
@@ -49,7 +51,7 @@ const Item = styled.section`
   transition: 0.3s;
 
   &:hover {
-    color: #393939;
+    color: #000;
   }
 `;
 

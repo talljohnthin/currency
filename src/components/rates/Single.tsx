@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { AppState } from "./../../store/configureStore";
 import styled from "styled-components";
 import { Rate } from "../../types/Rate";
@@ -47,6 +47,16 @@ const Item = styled.div`
   justify-content: center;
   box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.01),
     0 10px 20px 5px rgba(0, 0, 0, 0.01);
+
+  @media (max-width: 900px) {
+    width: 29%;
+  }
+  @media (max-width: 767px) {
+    width: 45%;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const Box = styled.div`
