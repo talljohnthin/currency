@@ -59,10 +59,13 @@ const Item = styled.section`
   font-weight: 500;
   font-size: 14px;
   cursor: pointer;
-  padding: 16px 25px;
+  padding: 17px 25px;
   transition: 0.3s;
   &:hover {
     color: #000;
+  }
+  @media (max-width: 767px) {
+    padding: 16px;
   }
 `;
 
@@ -70,5 +73,6 @@ const InnerWrapper = styled.section`
   display: flex;
   font-weight: 900;
   font-size: 26px;
-  outine: 0;
+  outline: 0;
+  align-items: center;
 `;

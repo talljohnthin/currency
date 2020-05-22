@@ -73,7 +73,7 @@ const Box = styled.div`
   align-items: center;
   color: #aea7be;
   transition: 0.3s;
-  transform: translateY(0) scale(1);
+  transform: translateY(10px) scale(1);
   box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.01),
     0 10px 20px 5px rgba(0, 0, 0, 0.01);
 `;
@@ -83,12 +83,15 @@ const Text = styled.div<ItemProps>`
   font-size: 14px;
   letter-spacing: 1px;
   color: ${(props) => (props.isOdd ? "#fff" : "#333")};
-  font-weight: 400;
+  font-weight: 500;
   transition: 0.3s;
-  transform: translateY(0);
+  transform: translateY(10px);
   & > span {
+    font-weight: 400;
     display: block;
-    font-size: 15.5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 `;
 
@@ -97,12 +100,16 @@ const Text2 = styled.div<ItemProps>`
   font-size: 14px;
   letter-spacing: 1px;
   color: ${(props) => (props.isOdd ? "#fff" : "#333")};
-  font-weight: 400;
+  font-weight: 500;
   transition: 0.3s;
   transform: translateY(150%) scale(0.4);
+  opacity: 0;
   & > span {
+    font-weight: 400;
     display: block;
-    font-size: 15.5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 `;
 
@@ -134,6 +141,7 @@ const Item = styled.div<ItemProps>`
 
     & > ${Text2} {
       transform: translateY(0) scale(1);
+      opacity: 1;
     }
   }
 
