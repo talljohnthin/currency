@@ -20,6 +20,9 @@ const Header = styled.section`
   background: white;
   display: flex;
   justify-content: center;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.01),
+    0 10px 20px 5px rgba(0, 0, 0, 0.01);
 `;
 
 const Logo = styled.section`

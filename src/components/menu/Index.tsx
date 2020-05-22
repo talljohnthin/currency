@@ -1,17 +1,21 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { AppState } from "./../../store/configureStore";
 import {
   startfetchRates,
   startGetRate,
   startGetRates,
+  startfetchYesterdaysRates,
 } from "./../../actions/Rate";
 
 interface Props {}
 
 const Index: FC<Props> = (props: Props) => {
+  const { fetchLoading } = useSelector((state: AppState) => state.rates);
   const dispatch = useDispatch();
+
   return (
     <>
       <Wrapper>
@@ -23,8 +27,14 @@ const Index: FC<Props> = (props: Props) => {
             <Item>Poland</Item>
           </Link>
         </InnerWrapper>
-        <Link to="/" onClick={() => dispatch(startfetchRates())}>
-          <Item>Refresh Rates</Item>
+        <Link
+          to="/"
+          onClick={() => {
+            dispatch(startfetchRates());
+            dispatch(startfetchYesterdaysRates());
+          }}
+        >
+          <Item>{fetchLoading ? "Fetching Rates..." : "Refresh Rates"}</Item>
         </Link>
       </Wrapper>
     </>
@@ -40,6 +50,8 @@ const Wrapper = styled.section`
   border: 1px solid #f1f1f1;
   border-radius: 6px;
   margin-bottom: 15px;
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.01),
+    0 10px 20px 5px rgba(0, 0, 0, 0.01);
 `;
 
 const Item = styled.section`
@@ -47,9 +59,8 @@ const Item = styled.section`
   font-weight: 500;
   font-size: 14px;
   cursor: pointer;
-  padding: 12px 15px;
+  padding: 16px 25px;
   transition: 0.3s;
-
   &:hover {
     color: #000;
   }
