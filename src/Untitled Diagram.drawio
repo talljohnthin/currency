@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-07-29T03:51:02.209Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36" etag="0Q2Pru2MTgiUQ4V4J7Z2" version="13.5.4" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-07-29T03:58:39.076Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36" etag="KZw3HR0jFsoxoEqiUEKq" version="13.5.4" type="github" pages="2">
   <diagram name="Invoice" id="03018318-947c-dd8e-b7a3-06fadd420f32">
     <mxGraphModel dx="1221" dy="645" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -150,6 +150,21 @@
         </mxCell>
         <mxCell id="1Pz-vUFgm7rJ-cvzT1_4-42" value="Analytics" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.callout;linkText=;textSize=17;textColor=#666666;callDir=SW;callStyle=line;fontSize=17;fontColor=#666666;align=left;verticalAlign=bottom;strokeColor=#666666;" vertex="1" parent="1Pz-vUFgm7rJ-cvzT1_4-38">
           <mxGeometry x="33.5" y="14.25" width="143" height="71.5" as="geometry" />
+        </mxCell>
+        <mxCell id="1Pz-vUFgm7rJ-cvzT1_4-43" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="830" y="310" width="215" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="1Pz-vUFgm7rJ-cvzT1_4-44" value="" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;labelBackgroundColor=none;strokeWidth=1;fillColor=none;fontFamily=Verdana;fontSize=12;align=center;comic=1;" vertex="1" parent="1Pz-vUFgm7rJ-cvzT1_4-43">
+          <mxGeometry width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="1Pz-vUFgm7rJ-cvzT1_4-126" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.simpleIcon;strokeColor=#999999;" vertex="1" parent="1Pz-vUFgm7rJ-cvzT1_4-43">
+          <mxGeometry x="10" y="40" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="1Pz-vUFgm7rJ-cvzT1_4-127" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.simpleIcon;strokeColor=#999999;" vertex="1" parent="1Pz-vUFgm7rJ-cvzT1_4-43">
+          <mxGeometry x="110" y="40" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="1Pz-vUFgm7rJ-cvzT1_4-128" value="Reports" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1Pz-vUFgm7rJ-cvzT1_4-43">
+          <mxGeometry y="10" width="80" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
